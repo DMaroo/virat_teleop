@@ -4,7 +4,7 @@
 #include <geometry_msgs/Twist.h>
 #include "io.hpp"
 
-#define CONV_FACTOR 2.5
+#define CONV_FACTOR 0.5
 
 const std::string info_msg =
 	"Reading from the keyboard and publishing to /cmd_vel\n\
@@ -20,8 +20,8 @@ CTRL+C followed by ENTER to quit\n\
 
 std::map<char, std::array<int, 4>> move_bindings = {
 	{'w', {1, 0, 0, 0}},
-	{'a', {0, 0, 0, 10}},
-	{'d', {0, 0, 0, -10}},
+	{'a', {0, 0, 0, 1}},
+	{'d', {0, 0, 0, -1}},
 	{'s', {-1, 0, 0, 0}},
 };
 
