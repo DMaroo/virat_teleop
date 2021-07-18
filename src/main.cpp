@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
 	ros::NodeHandle teleop_nh;
 
-	ros::Publisher pub = teleop_nh.advertise<geometry_msgs::Twist>("/cmd_vel", 10);
+	ros::Publisher pub = teleop_nh.advertise<geometry_msgs::Twist>("/virat/cmd_vel", 10);
 
 	geometry_msgs::Twist pub_vel;
 	ros::Rate rate(100);
